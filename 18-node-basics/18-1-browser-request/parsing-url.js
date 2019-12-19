@@ -15,7 +15,7 @@ http
     const name = query.first ? query.first : 'World';
 
     // write message and signal communication is complete
-    res.end(`Hello, ${name}!\n`);
+    res.end(`Hello, ${name}!`);
   })
   .listen(8124);
 

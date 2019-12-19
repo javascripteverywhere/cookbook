@@ -8,7 +8,7 @@ http
     res.writeHead(200, { 'content-type': 'text/plain' });
 
     // write message and signal communication is complete
-    res.end('Hello, World!\n');
+    res.end('Hello, World!');
   })
   .listen(8124);
 
