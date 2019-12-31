@@ -1,0 +1,14 @@
+{
+  "name": "node-timers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scrolling-timeline.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Scot <hello@adamdscott.com>",
+  "license": "ISC",
+  "dependencies": {
+    "nodejs-websocket": "^1.7.2"
+  }
+}

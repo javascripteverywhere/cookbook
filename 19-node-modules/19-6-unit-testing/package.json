@@ -1,0 +1,14 @@
+{
+  "name": "19-6-unit-testing",
+  "version": "1.0.0",
+  "description": "Node unit testing example",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Adam Scot <hello@adamdscott.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
