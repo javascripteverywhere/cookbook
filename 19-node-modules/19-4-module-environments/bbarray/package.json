@@ -1,0 +1,13 @@
+{
+  "name": "bbarray",
+  "version": "1.3.0",
+  "description": "Example CommonJS/EcmaScript module",
+  "type": "module",
+  "main": "./index.cjs",
+  "exports": {
+    ".": "./index.cjs",
+    "./module": "./wrapper.mjs"
+  },
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "MIT"
+}
