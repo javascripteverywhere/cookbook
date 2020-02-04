@@ -1,0 +1,16 @@
+{
+  "name": "formatted-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "xmlbuilder": "^13.0.2"
+  }
+}

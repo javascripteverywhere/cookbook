@@ -1,0 +1,6 @@
+h1 Profile
+ul
+  li ID: #{user.id}
+  li Name: #{user.username}
+  if user.emails
+    li Email: #{user.emails[0].value}

@@ -1,0 +1,7 @@
+if !user
+  p Welcome! Please 
+    a(href='/login/github') Login with GitHub
+else
+  h1 Hello #{user.username}! 
+  p View your 
+    a(href='/profile') profile
