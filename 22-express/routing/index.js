@@ -22,4 +22,21 @@ app.get(/.*day$/, (req, res) => {
   res.send(`Every day feels like ${req.path}`);
 });
 
+// POST request
+app.post('/new', (req, res) => {
+  res.send('POST request to the `new` route');
+});
+
+app
+  .route('/record')
+  .get((req, res) => {
+    res.send('Get a record');
+  })
+  .post((req, res) => {
+    res.send('Add a record');
+  })
+  .put((req, res) => {
+    res.send('Update a record');
+  });
+
 app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -4,12 +4,14 @@ const { Strategy } = require('passport-github');
 
 require('dotenv').config();
 
+const port = process.env.PORT || '3000';
+
 passport.use(
   new Strategy(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: 'http://localhost:3000/login/github/callback'
+      callbackURL: `http://localhost:${port}/login/github/callback`
     },
     (accessToken, refreshToken, profile, cb) => {
       return cb(null, profile);
@@ -67,6 +69,5 @@ app.get(
   }
 );
 
-app.listen(3000);
-
-console.log('Listening on port 3000');
+// listen on port 3000 or the PORT set as an environment variable
+app.listen(port, () => console.log(`Listening on port ${port}!`));

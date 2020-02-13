@@ -4,6 +4,7 @@ const { ApolloServer, gql } = require('apollo-server-express');
 const port = process.env.PORT || 3000;
 const app = express();
 
+// an array of data
 let todos = [
   {
     id: '1',
