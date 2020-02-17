@@ -1,0 +1,1 @@
+["Osprey in Flight"](https://www.flickr.com/photos/28122162@N04/11674590444) by [vladeb](https://www.flickr.com/photos/28122162@N04) is licensed under [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/?ref=ccsearch&atype=rich)

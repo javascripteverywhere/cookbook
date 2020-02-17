@@ -1,0 +1,12 @@
+{
+  "name": "accessing-command-line",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "ISC"
+}
