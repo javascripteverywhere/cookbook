@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Validating Forms</title>
+    <style>
+      [aria-invalid] {
+        background-color: #ffeeee;
+      }
+
+      [role='alert'] {
+        background-color: #ffcccc;
+        font-weight: bold;
+        padding: 5px;
+        border: 1px dashed #000;
+      }
+
+      div {
+        margin: 10px 0;
+        padding: 5px;
+        width: 400px;
+        background-color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="testform">
+      <div>
+        <label for="firstfield">*First Field:</label><br />
+        <input id="firstfield" name="firstfield" type="text" aria-required="true" required />
+      </div>
+      <div>
+        <label for="secondfield">Second Field:</label><br />
+        <input id="secondfield" name="secondfield" type="text" />
+      </div>
+      <div>
+        <label for="thirdfield">Third Field (numeric):</label><br />
+        <input id="thirdfield" name="thirdfield" type="number" />
+      </div>
+      <div>
+        <label for="fourthfield">Fourth Field:</label><br />
+        <input id="fourthfield" name="fourthfield" type="text" />
+      </div>
+
+      <input type="submit" value="Send Data" />
+    </form>
+
+    <script>
+      function removeAlert() {
+        const msg = document.getElementById('msg');
+        if (msg) {
+          document.body.removeChild(msg);
+        }
+      }
+
+      function resetField(elem) {
+        elem.parentNode.setAttribute('style', 'background-color: #ffffff');
+        const valid = elem.getAttribute('aria-invalid');
+        if (valid) elem.removeAttribute('aria-invalid');
+      }
+
+      function badField(elem) {
+        elem.parentNode.setAttribute('style', 'background-color: #ffeeee');
+        elem.setAttribute('aria-invalid', 'true');
+      }
+
+      function generateAlert(txt) {
+        // create new text and div elements and set
+        // Aria and class values and id
+        const txtNd = document.createTextNode(txt);
+        const msg = document.createElement('div');
+        msg.setAttribute('role', 'alert');
+        msg.setAttribute('id', 'msg');
+        msg.setAttribute('class', 'alert');
+
+        // append text to div, div to document
+        msg.appendChild(txtNd);
+        document.body.appendChild(msg);
+      }
+
+      function validateField() {
+        // remove any existing alert regardless of value
+        removeAlert();
+        console.log('validate');
+        // check for number
+        if (typeof this.value === 'number') {
+          resetField(this);
+        } else {
+          badField(this);
+          generateAlert(
+            'You entered an invalid value in Third Field. ' + 'Only numeric values such as 105 or 3.54 are allowed'
+          );
+        }
+      }
+
+      function mandatoryField() {
+        // remove any existing alert
+        removeAlert();
+
+        // check for value
+        if (this.value.length > 0) {
+          resetField(this);
+        } else {
+          badField(this);
+          generateAlert('You must enter a value into First Field');
+        }
+      }
+      document.getElementById('firstfield').onblur = mandatoryField;
+      document.getElementById('thirdfield').oninput = validateField;
+    </script>
+  </body>
+</html>

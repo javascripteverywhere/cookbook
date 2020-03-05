@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Deleting Rows from an HTML Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      tr:nth-child(2n + 1) {
+        background-color: #eeffee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Deleting Rows from an HTML Table</h1>
+    <table id="mixed">
+      <tr>
+        <th>Value One</th>
+        <th>Value two</th>
+        <th>Value three</th>
+      </tr>
+    </table>
+
+    <div id="result"></div>
+    <script src="delete.js"></script>
+  </body>
+</html>

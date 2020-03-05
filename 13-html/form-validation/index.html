@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      [aria-invalid] {
+        background-color: #f5b2b2;
+      }
+
+      input {
+        margin: 10px 0;
+        padding: 5px;
+        background-color: #ffffff;
+      }
+    </style>
+    <script src="https://unpkg.com/validator@12.2.0/validator.min.js"></script>
+    <title>Validating Form Data</title>
+  </head>
+  <body>
+    <h1>Validating Form Data</h1>
+
+    <form id="example" name="example" action="" method="post">
+      <fieldset>
+        <legend>Example Form</legend>
+        <div>
+          <label for="email">Email (required):</label>
+          <input type="text" id="email" name="email" value="" required />
+        </div>
+        <div>
+          <label for="postal">Postal Code:</label>
+          <input type="text" id="postal" name="url" value="" />
+        </div>
+        <div id="error"></div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </fieldset>
+    </form>
+
+    <script src="validate.js"></script>
+  </body>
+</html>

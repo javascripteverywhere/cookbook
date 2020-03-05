@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Highlighting Form Errors and Accessibly</title>
+    <style>
+      [aria-invalid] {
+        background-color: #f5b2b2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Highlighting Form Errors and Accessibly</h1>
+
+    <form id="example" name="example" action="" method="post">
+      <fieldset>
+        <legend>Example Form</legend>
+        <div>
+          <label for="required-field">Email (required):</label>
+          <input type="text" id="required-field" name="email" value="" required />
+        </div>
+        <div>
+          <label for="number">Number:</label>
+          <input type="text" id="number" name="number" value="" />
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </fieldset>
+    </form>
+
+    <a href="visual-cues.html">Advanced: Visual Cues</a>
+
+    <script src="error.js"></script>
+  </body>
+</html>
