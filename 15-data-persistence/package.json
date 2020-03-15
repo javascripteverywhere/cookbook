@@ -1,0 +1,15 @@
+{
+  "name": "15-data-persistence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '**/*.html' '**/*.js'"
+  },
+  "keywords": [],
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

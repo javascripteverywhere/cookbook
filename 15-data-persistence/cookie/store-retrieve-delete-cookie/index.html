@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      div {
+        margin: 10px;
+      }
+
+      .data {
+        width: 200px;
+        background-color: yellow;
+        padding: 5px;
+      }
+    </style>
+    <title>Store, retrieve, and delete a cookie</title>
+  </head>
+  <body>
+    <h1>Store, retrieve, and delete a cookie</h1>
+
+    <form>
+      <div>
+        <label for="key"> Enter key:</label>
+        <input type="text" id="key" />
+      </div>
+      <div>
+        <label for="value">Enter value:</label>
+        <input type="text" id="value" />
+      </div>
+    </form>
+    <button id="set">Set data</button>
+    <button id="get">Get data</button>
+    <button id="erase">Erase data</button>
+
+    <p>Cookie value:</p>
+    <div id="cookiestr" class="data"></div>
+
+    <script src="cookie.js"></script>
+  </body>
+</html>

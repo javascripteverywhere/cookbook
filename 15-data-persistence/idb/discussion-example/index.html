@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IDB Discussion Example</title>
+    <style>
+      div {
+        margin: 10px;
+      }
+
+      .data {
+        width: 200px;
+        background-color: yellow;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IDB Discussion Example</h1>
+
+    <form>
+      <div>
+        <label for="name"> Enter name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="age">Enter age:</label>
+        <input type="text" id="age" />
+      </div>
+    </form>
+    <button id="set">Set data</button>
+    <button id="get">Get data</button>
+
+    <p>Data:</p>
+    <div class="data">
+      <ul id="data-list"></ul>
+    </div>
+
+    <script type="module" src="idb-discussion.js"></script>
+  </body>
+</html>
