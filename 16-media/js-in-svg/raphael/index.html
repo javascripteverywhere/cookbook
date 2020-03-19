@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <title>Raphaël</title>
+  </head>
+  <body>
+    <h1>Raphaël</h1>
+
+    <script>
+      // Creates canvas 320 × 400 at 10, 50
+      const paper = Raphael(10, 50, 320, 400);
+      // Creates circle at x = 150, y = 140, with radius 100
+      const circle = paper.circle(150, 140, 100);
+      // Sets the fill attribute of the circle to red (#f00)
+      circle.attr('fill', '#f0f');
+      // Sets the stroke attribute of the circle to white
+      circle.attr('stroke', '#ff0');
+    </script>
+  </body>
+</html>

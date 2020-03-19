@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <title>SVG in Object</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <object id="object" type="image/svg+xml" data="../demo1.svg">
+    <p>No SVG support</p>
+  </object>
+  <script type="text/javascript">
+    const object = document.getElementById('object');
+    object.onload = function() {
+      let svgdoc;
+
+      // get access to the SVG document object
+      try {
+        svgdoc = object.contentDocument;
+      } catch (e) {
+        try {
+          svgdoc = object.getSVGDocument();
+        } catch (err) {
+          console.log(err, 'SVG in object not supported in this environment');
+        }
+      }
+
+      if (!svgdoc) return;
+
+      // get SVG element and modify
+      const square = svgdoc.getElementById('square');
+      square.onclick = function() {
+        let width = parseFloat(square.getAttribute('width'));
+        width -= 50;
+        square.setAttribute('width', width);
+        const color = square.getAttribute('fill');
+        if (color == 'blue') {
+          square.setAttribute('fill', 'yellow');
+          square.setAttribute('stroke', 'green');
+        } else {
+          square.setAttribute('fill', 'blue');
+          square.setAttribute('stroke', 'red');
+        }
+      };
+    };
+  </script>
+</body>

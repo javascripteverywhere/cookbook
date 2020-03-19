@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Integrating SVG and the Canvas Element in HTML</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400px" height="100px">
+      <p>canvas item alternative content</p>
+    </canvas>
+
+    <svg id="svgelem" height="400">
+      <title>SVG Circle</title>
+      <script type="text/javascript">
+        window.onload = function () { const context = document.getElementById("myCanvas").getContext('2d');
+        context.fillStyle = 'rgba(0,200,0,0.7)'; context.fillRect(0,0,100,100); };
+      </script>
+      <circle id="redcircle" cx="100" cy="100" r="100" fill="red" stroke="#000" />
+    </svg>
+
+    <p><a href="inline-svg.html">Inline SVG Example</a></p>
+  </body>
+</html>
