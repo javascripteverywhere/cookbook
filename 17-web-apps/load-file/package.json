@@ -1,0 +1,14 @@
+{
+  "name": "load-file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./"
+  },
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

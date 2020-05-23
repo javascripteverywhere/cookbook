@@ -10,8 +10,9 @@
     "no-console": "off"
   },
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
   "env": {
     "es6": true,

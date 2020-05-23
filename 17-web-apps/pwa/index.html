@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" media="screen" />
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#ffc40d" />
+    <meta name="msapplication-TileImage" content="/img/icons/mstile-310x310.png" />
+
+    <title>Example PWA</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <h1>Example PWA</h1>
+      </div>
+    </header>
+
+    <main class="primary-content">
+      <div class="wrapper">
+        <p>
+          Nostrud Lorem fugiat non cupidatat id elit magna qui commodo proident eiusmod. Elit ut occaecat eiusmod labore
+          dolore nostrud proident id. Ad elit nisi velit laboris sint proident duis labore consequat pariatur Lorem
+          nulla. Nostrud laboris aliquip ullamco tempor et aliquip enim fugiat voluptate incididunt non irure nostrud.
+          Dolore amet Lorem eiusmod deserunt proident in ipsum proident amet sunt reprehenderit proident. Irure sit non
+          eu dolor amet eiusmod. Commodo nisi laborum excepteur commodo duis officia mollit laborum.
+        </p>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <!-- initiate the service worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker
+            .register('service-worker.js')
+            .then(reg => {
+              console.log('Service worker registered!', reg);
+            })
+            .catch(err => {
+              console.log('Service worker registration failed: ', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
