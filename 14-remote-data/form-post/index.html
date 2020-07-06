@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        padding: 1.5rem;
+      }
+
+      label,
+      legend {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      input,
+      textarea {
+        background-color: transparent;
+        border: 0.1rem solid black;
+        border-radius: 0.4rem;
+        box-shadow: none;
+        box-sizing: inherit;
+        padding: 0.6rem;
+        width: 50%;
+        margin-bottom: 1.8rem;
+      }
+
+      textarea {
+        min-height: 6.5rem;
+      }
+
+      button {
+        display: block;
+        font-size: 1.6rem;
+      }
+    </style>
+    <title>Form POST</title>
+  </head>
+  <body>
+    <h1>Form POST</h1>
+
+    <p>To run example, start the Node server in a separate terminal tab:</p>
+
+    <pre>
+<code>
+cd server
+npm start
+</code>
+    </pre>
+
+    <form id="my-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="mail">E-mail:</label>
+      <input type="email" id="mail" name="email" />
+
+      <label for="msg">Message:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button>Submit</button>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>
