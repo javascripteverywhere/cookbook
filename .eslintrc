@@ -10,7 +10,7 @@
     "no-console": "off"
   },
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "allowImportExportEverywhere": true
   },
