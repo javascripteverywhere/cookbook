@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      #example-element {
+        display: block;
+        text-align: center;
+        width: 100%;
+        min-height: 80px;
+        padding: 10px;
+      }
+
+      .toggle-me {
+        font-weight: bold;
+        background-color: greenyellow;
+      }
+
+      .new-class {
+        border: 4px solid green;
+      }
+    </style>
+    <title>Change Class</title>
+  </head>
+  <body>
+    <h1>Change An Element's Class</h1>
+
+    <div id="example-element" class="toggle-me">
+      <p>Watch me change</p>
+    </div>
+
+    <button id="toggle">Toggle</button>
+    <button id="add">Add a class</button>
+    <button id="remove">Remove a class</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
