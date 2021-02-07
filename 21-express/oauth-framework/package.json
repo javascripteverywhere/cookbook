@@ -1,0 +1,30 @@
+{
+  "name": "oauth-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "twitter-oauth": "nodemon twitter-oauth-1/index.js",
+    "client-credentials": "nodemon client-credentials/index.js"
+  },
+  "keywords": [],
+  "author": "Adam Scott <hello@adamdscott.com>",
+  "license": "ISC",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "node-fetch": "^2.6.1",
+    "node-twitter-api": "^1.8.0",
+    "nodemon": "^2.0.7",
+    "oauth": "^0.9.15",
+    "passport": "^0.4.1",
+    "passport-twitter": "^1.0.4",
+    "pug": "^3.0.0",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1",
+    "twitter-lite": "^0.14.0"
+  }
+}
