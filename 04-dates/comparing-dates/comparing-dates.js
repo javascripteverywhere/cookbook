@@ -10,7 +10,7 @@ if (newerDay > oldDay) {
 const today = new Date();
 
 // Create another copy of the current date, slightly later.
-for (let i=0; i<1000000; i+=1) {};
+for (let i=0; i<1000000; i+=1) {;};
 const todayDifferent = new Date();
 
 // This is false, because the times are different

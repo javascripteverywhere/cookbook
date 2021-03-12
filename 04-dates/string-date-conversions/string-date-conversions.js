@@ -1,10 +1,7 @@
-dateFromStringTests();
-dateToStringTests();
-
 function dateFromStringTests() {
   // Date *from* string (in ISO 8601 standard)
   const ISOdateConverted = new Date('2021-12-17T03:24:00Z');
-  console.log('ISO converted: ' + ISOdateConverted);
+  console.log(`ISO converted: ${ISOdateConverted}`);
 
   // Date *from* custom string (more involved)
   const stringDate = '12/30/2021';
@@ -19,18 +16,18 @@ function dateFromStringTests() {
 
   // Apply the correction for 0-based month numbering
   const stringDateConverted = new Date(year, month - 1, day);
-  console.log('String converted: ' + stringDateConverted);
+  console.log(`String converted: ${stringDateConverted}`);
 
   // Bad date test
   const badDate = '12 bananas';
   const convertedDate = new Date(badDate);
 
-  if (isNaN(convertedDate)) {
+  if (Number.isNaN(convertedDate)) {
     // We end up here, because the date object was not created successfully
-    console.log(badDate + ' is not a valid date');
+    console.log(`${badDate} is not a valid date`);
   } else {
     // For a valid Data instance, we end up here
-    console.log(badDate + ' is a valid date');
+    console.log(`${badDate} is a valid date`);
   }
 }
 
@@ -49,12 +46,15 @@ function dateToStringTests() {
   const year = date.getFullYear();
 
   const customDateString = `${year}.${month}.${day}`;
-  console.log('Custom date representation: ' + customDateString);
+  console.log(`Custom date representation: ${customDateString}`);
 
   // Date *to* localized string 
-  console.log('US: ' + new Intl.DateTimeFormat('en-US').format(date));
-  console.log('UK: ' + new Intl.DateTimeFormat('en-GB').format(date));
-  console.log('Japanese: ' + new Intl.DateTimeFormat('ja-JP').format(date));
+  const usDate = new Intl.DateTimeFormat('en-US').format(date);
+  const ukDate = new Intl.DateTimeFormat('en-GB').format(date);
+  const jpDate = new Intl.DateTimeFormat('ja-JP').format(date);
+  console.log(`US: ${usDate}`);
+  console.log(`UK: ${ukDate}`);
+  console.log(`Japanese: ${jpDate}`);
 
   // Customized German date format
   const formatter = new Intl.DateTimeFormat('de-DE', {
@@ -64,5 +64,8 @@ function dateToStringTests() {
     day: 'numeric',
   });
 
-  console.log('Custom German: ' + formatter.format(date));
+  console.log(`Custom German: ${formatter.format(date)}`);
 }
+
+dateFromStringTests();
+dateToStringTests();

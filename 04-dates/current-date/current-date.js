@@ -13,4 +13,4 @@ console.log(`Time ${hours}:${minutes}`);
 
 // Remove all the time information
 today.setHours(0,0,0,0);
-console.log('Same date with no time: ' + today);
+console.log(`Same date with no time: ${today}`);
