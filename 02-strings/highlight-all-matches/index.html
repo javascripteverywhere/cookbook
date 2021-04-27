@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Finding All Instances of a Pattern</title>
+
+    <style>
+      .found {
+        background-color: #ff0;
+      }
+      body {
+        margin: 15px;
+      }
+      textarea {        
+        width: 100%;
+        height: 350px;
+      }
+    </style> 
+  </head>
+  <body>
+    <h1>Finding All Instances of a Pattern</h1>
+    
+    <form id="textsearch">
+      <textarea id="incoming">
+See the kitten on the wall, sporting with the leaves that fall,
+Withered leaves—one—two—and three, from the lofty elder-tree!
+Through the calm and frosty air, of this morning bright and fair . . .
+—But the kitten, how she starts; Crouches, stretches, paws, and darts!
+
+First at one, and then its fellow, just as light and just as yellow;
+There are many now—now one—now they stop and there are none;
+What intenseness of desire, in her upward eye of fire!
+
+With a tiger-leap half way, now she meets the coming prey,
+Lets it go as fast, and then, has it in her power again:
+Now she works with three or four, like an Indian Conjuror;
+Quick as he in feats of art, far beyond in joy of heart.
+      </textarea>
+      <p>
+        Search pattern: <input id="pattern" type="text" value="lea(f|ves)">
+      </p>
+    </form>
+    <button id="searchSubmit">Search for pattern</button>
+    <div id="searchResult"></div>
+
+    <script src="highlight-all-matches.js"></script>
+  </body>
+</html>
