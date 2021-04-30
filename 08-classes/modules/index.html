@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ES6 Module Test</title>
+  </head>
+  <body>
+    <h1>ES6 Module Test</h1>
+    <p>This example uses two modules, pageScript.js and lengthConverterModule.js,
+    and has an inline script on this page. The inline script attaches the
+    button.click event handler to the doSampleConversion() function uses the
+    LengthConverter.Convert() method from lengthConverterModule.js.</p>
+    <p>Because of module security restrictions, this example must be hosted
+    onoliner in a test web server. It will not run successfully from the local
+    file system.</p>
+    <button id="convertButton">Do Sample Conversion</button>
+        
+<script type="module">
+  import {doSampleConversion} from './pageScript.js'
+
+  document.getElementById('convertButton').addEventListener('click', doSampleConversion);
+</script>
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-const products = new Map()
+const products = new Map();
 
 // Add three items
 products.set('RU007', {name: 'Rain Racer 2000', price: 1499.99});
@@ -17,4 +17,4 @@ if (typeof product !== 'undefined') {
 
 // Remove the Edible Tape item
 products.delete('STKY1');
-console.log(products.size) // 2
+console.log(products.size); // 2
