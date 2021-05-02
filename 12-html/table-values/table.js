@@ -1,7 +1,7 @@
 let sum = 0;
 
 // use querySelector to find all second table cells
-const cells = document.querySelectorAll('td + td');
+const cells = document.querySelectorAll('td:nth-of-type(2)');
 
 // iterate over each
 cells.forEach(cell => {

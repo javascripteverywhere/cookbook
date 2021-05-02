@@ -1,5 +1,5 @@
 # ignore files created by the Express Generator
-22-express/express-generator
+21-express/express-generator
 
 # ignore webpack output
 dist/
