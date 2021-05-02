@@ -1,0 +1,32 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 20px;
+  }
+  
+  #primeContainer {
+    border: solid 1px black;
+    padding: 3px;
+    height: 300px;
+    max-width: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: x-small;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 60px;
+  }
+  
+  button {
+    padding: 3px;
+  }
+  
+  p {
+    margin-bottom: 3px;
+  }
+  
+  #status {
+    color: darkred;
+  }
