@@ -1,4 +1,4 @@
-// Two ways to make BigInts
+// Here are two ways to make BigInts
 const bigInteger1 = BigInt(10);
 console.log(bigInteger1);
 
