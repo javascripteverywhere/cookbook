@@ -10,6 +10,6 @@
   "author": "Adam Scott <hello@adamdscott.com>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.27.10"
   }
 }
